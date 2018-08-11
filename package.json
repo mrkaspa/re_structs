@@ -19,9 +19,8 @@
   },
   "dependencies": {
     "@opam/dune": "*",
-    "@opam/lambda-term": "*",
-    "@opam/lwt": "*",
     "@esy-ocaml/reason": "*",
+    "@opam/core": "v0.11.1",
     "refmterr": "*",
     "ocaml": "~4.6.0"
   },

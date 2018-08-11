@@ -1,8 +1,12 @@
-open Lwt;
+open Core;
 
-open LTerm_style;
+let dedup = (comparator, ls) =>
+  ls |> List.fold(~init=Set.empty(comparator), ~f=Set.add) |> Set.to_list;
 
-open LTerm_text;
+let make_int_map = ls => Map.of_alist_exn((module Int), ls);
 
-let hello = () =>
-  LTerm.printls(eval([B_fg(red), S("Hello,"), E_fg, S(" "), B_fg(green), S("World!"), E_fg]));
+let print_value =
+  fun
+  | Some(value) => print_string("Cad = " ++ value ++ "\n")
+
+  | None => print_string("Not found\n");

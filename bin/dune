@@ -1,4 +1,4 @@
 (executable
-  (name Hello)
-  (public_name Hello.exe)
-  (libraries lib))
+  (name Structs)
+  (public_name Structs.exe)
+  (libraries lib core))
