@@ -9,3 +9,20 @@ let print_value =
   fun
   | Some(value) => print_string("Cad = " ++ value ++ "\n")
   | None => print_string("Not found\n");
+
+module Foo_and_bar: {
+  type t = {
+    foo: Int.Set.t,
+    bar: string,
+  };
+  include Comparable.S with type t := t;
+} = {
+  module T = {
+    [@deriving (sexp, compare)] type t = {
+      foo: Int.Set.t,
+      bar: string,
+    };
+  };
+  include T;
+  include Comparable.Make(T);
+};

@@ -3,4 +3,4 @@
   (flags (-w -40 -w +26))
   (public_name hello-reason)
   (libraries core)
-  (preprocess (pps ppx_sexp_conv)))
+  (preprocess (pps ppx_sexp_conv ppx_compare)))

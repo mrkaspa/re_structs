@@ -1,5 +1,5 @@
 {
-  "hash": "802aa29e1d59fa2a7688cdffe5b0a5af",
+  "hash": "9e052d61661b090f248f7fa3740cd3f0",
   "root": "hello-reason@path:.",
   "node": {
     "refmterr@3.1.7": {
@@ -38,7 +38,7 @@
       "dependencies": [
         "@esy-ocaml/merlin@3.0.5005", "@esy-ocaml/reason@3.3.2",
         "@opam/core@opam:v0.11.1", "@opam/dune@opam:1.1.1",
-        "@opam/ppx_deriving@opam:4.2.1", "@opam/ppx_sexp_conv@opam:v0.11.2",
+        "@opam/ppx_compare@opam:v0.11.1", "@opam/ppx_sexp_conv@opam:v0.11.2",
         "ocaml@4.6.4", "refmterr@3.1.7"
       ]
     },
@@ -357,27 +357,6 @@
         "@opam/jbuilder@opam:transition",
         "@opam/ocaml-migrate-parsetree@opam:1.0.11",
         "@opam/ppxlib@opam:0.3.0", "@opam/typerep@opam:v0.11.0"
-      ]
-    },
-    "@opam/ppx_tools@opam:5.1+4.06.0": {
-      "record": {
-        "name": "@opam/ppx_tools",
-        "version": "opam:5.1+4.06.0",
-        "source": [
-          "archive:https://opam.ocaml.org/archives/ppx_tools.5.1+4.06.0+opam.tar.gz#md5:abb73bb1a7e4299986cd7d457bea9a48",
-          "archive:https://github.com/ocaml-ppx/ppx_tools/archive/5.1+4.06.0.tar.gz#md5:6ba2e9690b1f579ba562b86022d1c308"
-        ],
-        "files": [],
-        "opam": {
-          "name": "ppx_tools",
-          "version": "5.1+4.06.0",
-          "opam":
-            "opam-version: \"1.2\"\nmaintainer: \"alain.frisch@lexifi.com\"\nauthors: \"Alain Frisch <alain.frisch@lexifi.com>\"\nlicense: \"MIT\"\ntags: \"syntax\"\nhomepage: \"https://github.com/ocaml-ppx/ppx_tools\"\nbug-reports: \"https://github.com/ocaml-ppx/ppx_tools/issues\"\ndepends: [\n  \"ocamlfind\" {>= \"1.5.0\"}\n]\navailable: ocaml-version >= \"4.06.0\" & ocaml-version < \"4.08\"\nbuild: [make \"all\"]\ninstall: [make \"install\"]\nremove: [\"ocamlfind\" \"remove\" \"ppx_tools\"]\ndev-repo: \"git://github.com/ocaml-ppx/ppx_tools.git\"",
-          "override": null
-        }
-      },
-      "dependencies": [
-        "@esy-ocaml/substs@0.0.1", "@opam/ocamlfind@opam:1.8.0"
       ]
     },
     "@opam/ppx_sexp_value@opam:v0.11.0": {
@@ -781,32 +760,6 @@
         "@opam/ppxlib@opam:0.3.0"
       ]
     },
-    "@opam/ppx_deriving@opam:4.2.1": {
-      "record": {
-        "name": "@opam/ppx_deriving",
-        "version": "opam:4.2.1",
-        "source": [
-          "archive:https://opam.ocaml.org/archives/ppx_deriving.4.2.1+opam.tar.gz#md5:17337ce91b5b1baa423e411a358a3de8",
-          "archive:https://github.com/ocaml-ppx/ppx_deriving/archive/v4.2.1.tar.gz#md5:2195fccf2a527c3ff9ec5b4e36e2f0a8"
-        ],
-        "files": [],
-        "opam": {
-          "name": "ppx_deriving",
-          "version": "4.2.1",
-          "opam":
-            "opam-version: \"1.2\"\nmaintainer: \"whitequark <whitequark@whitequark.org>\"\nauthors: \"whitequark <whitequark@whitequark.org>\"\nlicense: \"MIT\"\ntags: \"syntax\"\nhomepage: \"https://github.com/whitequark/ppx_deriving\"\ndoc: \"https://whitequark.github.io/ppx_deriving\"\nbug-reports: \"https://github.com/whitequark/ppx_deriving/issues\"\ndepends: [\n  \"ocamlbuild\" {build}\n  \"ocamlfind\" {build & >= \"1.6.0\"}\n  \"cppo\" {build}\n  \"cppo_ocamlbuild\" {build}\n  \"ocaml-migrate-parsetree\"\n  \"ppx_derivers\"\n  \"ppx_tools\" {>= \"4.02.3\"}\n  \"result\"\n  \"ounit\" {test}\n]\navailable: ocaml-version > \"4.03.0\" & opam-version >= \"1.2\"\nbuild: [\n  \"ocaml\"\n  \"pkg/build.ml\"\n  \"native=%{ocaml-native-dynlink}%\"\n  \"native-dynlink=%{ocaml-native-dynlink}%\"\n]\nrun-test: [\n  \"ocamlbuild\"\n  \"-classic-display\"\n  \"-use-ocamlfind\"\n  \"src_test/test_ppx_deriving.byte\"\n  \"--\"\n]\nsubsts: \"pkg/META\"\ndev-repo: \"git+https://github.com/whitequark/ppx_deriving.git\"\nbuild-doc: [make \"doc\"]",
-          "override": null
-        }
-      },
-      "dependencies": [
-        "@esy-ocaml/substs@0.0.1", "@opam/cppo@opam:1.6.4",
-        "@opam/cppo_ocamlbuild@opam:1.6.0",
-        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
-        "@opam/ocamlbuild@opam:0.12.0", "@opam/ocamlfind@opam:1.8.0",
-        "@opam/ppx_derivers@opam:1.0", "@opam/ppx_tools@opam:5.1+4.06.0",
-        "@opam/result@opam:1.3"
-      ]
-    },
     "@opam/ppx_derivers@opam:1.0": {
       "record": {
         "name": "@opam/ppx_derivers",
@@ -1196,18 +1149,18 @@
         "@opam/ocamlfind@opam:1.8.0"
       ]
     },
-    "@opam/menhir@opam:20170607": {
+    "@opam/menhir@opam:20170509": {
       "record": {
         "name": "@opam/menhir",
-        "version": "opam:20170607",
+        "version": "opam:20170509",
         "source": [
-          "archive:https://opam.ocaml.org/archives/menhir.20170607+opam.tar.gz#md5:aad332baa558bd26202cebc2b1b84a0b",
-          "archive:http://gallium.inria.fr/~fpottier/menhir/menhir-20170607.tar.gz#md5:993b60845182c71d777b1f3cf9a01b96"
+          "archive:https://opam.ocaml.org/archives/menhir.20170509+opam.tar.gz#md5:0ad65a00cb3c02587fba9048af8d84b9",
+          "archive:http://gallium.inria.fr/~fpottier/menhir/menhir-20170509.tar.gz#md5:b8ba18b5abda831cf41cd4fa65f4c51b"
         ],
         "files": [],
         "opam": {
           "name": "menhir",
-          "version": "20170607",
+          "version": "20170509",
           "opam":
             "opam-version: \"1.2\"\nmaintainer: \"francois.pottier@inria.fr\"\nauthors: [\n  \"François Pottier <francois.pottier@inria.fr>\"\n  \"Yann Régis-Gianas <yrg@pps.univ-paris-diderot.fr>\"\n]\nhomepage: \"http://gallium.inria.fr/~fpottier/menhir/\"\nbug-reports: \"menhir@inria.fr\"\ndepends: [\n  \"ocamlfind\"\n  \"ocamlbuild\" {build}\n]\navailable: ocaml-version >= \"4.02\"\nbuild: [\n  make\n  \"-f\"\n  \"Makefile\"\n  \"PREFIX=%{prefix}%\"\n  \"USE_OCAMLFIND=true\"\n  \"docdir=%{doc}%/menhir\"\n  \"libdir=%{lib}%/menhir\"\n  \"mandir=%{man}%/man1\"\n]\ninstall: [\n  make\n  \"-f\"\n  \"Makefile\"\n  \"install\"\n  \"PREFIX=%{prefix}%\"\n  \"docdir=%{doc}%/menhir\"\n  \"libdir=%{lib}%/menhir\"\n  \"mandir=%{man}%/man1\"\n]\nremove: [\n  make\n  \"-f\"\n  \"Makefile\"\n  \"uninstall\"\n  \"PREFIX=%{prefix}%\"\n  \"docdir=%{doc}%/menhir\"\n  \"libdir=%{lib}%/menhir\"\n  \"mandir=%{man}%/man1\"\n]\ndev-repo: \"git+https://gitlab.inria.fr/fpottier/menhir.git\"",
           "override": null
@@ -1326,28 +1279,6 @@
         }
       },
       "dependencies": [ "@esy-ocaml/substs@0.0.1" ]
-    },
-    "@opam/cppo_ocamlbuild@opam:1.6.0": {
-      "record": {
-        "name": "@opam/cppo_ocamlbuild",
-        "version": "opam:1.6.0",
-        "source": [
-          "archive:https://opam.ocaml.org/archives/cppo_ocamlbuild.1.6.0+opam.tar.gz#md5:dbc21d18562fadd1b999a5410d00e3fa",
-          "archive:https://github.com/mjambon/cppo/archive/v1.6.0.tar.gz#md5:aee411b3546bc5d198c71ae9185cade4"
-        ],
-        "files": [],
-        "opam": {
-          "name": "cppo_ocamlbuild",
-          "version": "1.6.0",
-          "opam":
-            "opam-version: \"1.2\"\nmaintainer: \"martin@mjambon.com\"\nauthors: \"Martin Jambon\"\nlicense: \"BSD-3-Clause\"\nhomepage: \"http://mjambon.com/cppo.html\"\nbug-reports: \"https://github.com/mjambon/cppo/issues\"\ndepends: [\n  \"jbuilder\" {build & >= \"1.0+beta10\"}\n  \"ocamlbuild\"\n  \"cppo\" {>= \"1.6.0\"}\n]\nbuild: [\n  [\"jbuilder\" \"subst\" \"-p\" name] {pinned}\n  [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\n]\ndev-repo: \"git+https://github.com/mjambon/cppo.git\"",
-          "override": null
-        }
-      },
-      "dependencies": [
-        "@esy-ocaml/substs@0.0.1", "@opam/cppo@opam:1.6.4",
-        "@opam/jbuilder@opam:transition", "@opam/ocamlbuild@opam:0.12.0"
-      ]
     },
     "@opam/cppo@opam:1.6.4": {
       "record": {
@@ -1628,7 +1559,7 @@
       },
       "dependencies": [
         "@esy-ocaml/esy-installer@0.0.0", "@esy-ocaml/substs@0.0.1",
-        "@opam/jbuilder@opam:transition", "@opam/menhir@opam:20170607",
+        "@opam/jbuilder@opam:transition", "@opam/menhir@opam:20170509",
         "@opam/merlin-extend@opam:0.3",
         "@opam/ocaml-migrate-parsetree@opam:1.0.11",
         "@opam/ocamlfind@opam:1.8.0", "@opam/result@opam:1.3"

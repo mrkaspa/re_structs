@@ -20,8 +20,8 @@
   "dependencies": {
     "@opam/dune": "*",
     "@opam/core": "v0.11.1",
-    "@opam/ppx_deriving": "*",
     "@opam/ppx_sexp_conv": "*",
+    "@opam/ppx_compare": "*",
     "@esy-ocaml/reason": "*",
     "refmterr": "*",
     "ocaml": "~4.6.0"
