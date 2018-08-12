@@ -12,4 +12,7 @@ let _ = {
   let ls = [2, 2, 1, 2, 4, 5, 4, 3];
   let dd = Util.dedup((module Int), ls);
   List.iter(dd, ~f=n => print_string("- " ++ string_of_int(n) ++ "\n"));
+
+  /* Custom Comparable */
+  print_string("Custom >> " ++ string_of_bool(Util.cmp2()) ++ "\n");
 };
