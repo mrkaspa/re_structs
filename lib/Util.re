@@ -10,15 +10,13 @@ let print_value =
   | Some(value) => print_string("Cad = " ++ value ++ "\n")
   | None => print_string("Not found\n");
 
-module Foo_and_bar: {
-  type t = {
-    foo: Int.Set.t,
-    bar: string,
-  };
+module CustomComparable: {
+  type t;
   include Comparable.S with type t := t;
 } = {
   module T = {
-    [@deriving (sexp, compare)] type t = {
+    [@deriving (sexp, compare)]
+    type t = {
       foo: Int.Set.t,
       bar: string,
     };
