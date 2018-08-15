@@ -1,6 +1,6 @@
 (library
   (name lib)
   (flags (-w -40 -w +26))
-  (public_name hello-reason)
+  (public_name re_structs)
   (libraries core)
   (preprocess (pps ppx_sexp_conv ppx_compare)))

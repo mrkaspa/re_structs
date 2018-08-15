@@ -1,5 +1,5 @@
 {
-  "name": "hello-reason",
+  "name": "re_structs",
   "version": "0.1.0",
   "description": "Reason workflow with Esy",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "NOTE": "Optional release Section. Customizes result of `esy release`",
     "release": {
       "releasedBinaries": [
-        "Hello.exe"
+        "Structs.exe"
       ],
       "deleteFromBinaryRelease": [
         "*esy_ocaml_*",
